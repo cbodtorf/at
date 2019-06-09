@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AT</title>
+    <title>ATDB</title>
     <meta name='description' content='Microservice to retrieve Appalachian Trail Data'/>
     <link rel='stylesheet' href='https://unpkg.com/svbstrate'/>
     <style>
@@ -28,7 +28,7 @@
   <body>
     <main class='f aic jcc px1' style='color: #333'>
       <div class='py1 mxa x' style='max-width: 600px'>
-        <h1 class='h2'>at.now.sh</h1>
+        <h1 class='h2'>atdb.now.sh</h1>
         <p class='pb075'>Microservice to retrieve Appalachian Trail Data</p>
 
         <div class='pb1'>
@@ -36,14 +36,14 @@
           <pre class='p1' style='max-width: 100%;overflow: auto;background: #333;color: #fff;'>
             <code>
 const type = 'feature'
-fetch(`https://at.now.sh/api/data?type=${type}`)
+fetch(`https://atdb.now.sh/api/data?type=${type}`)
             </code>
           </pre>
         </div>
 
         <div class='pb1'>
           <h4>endpoints</h4>
-          <a href='/api/data?type=feature'><pre>https://at.now.sh/api/data?type={type}</pre></a>
+          <a href='/api/data?type=feature'><pre>https://atdb.now.sh/api/data?type={type}</pre></a>
         </div>
 
         <div class='pb1'>
