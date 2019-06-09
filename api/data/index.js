@@ -1,12 +1,14 @@
 const { parse } = require('url')
-const data = require('at-data.json')
+const fs = require('fs')
+const path = require("path")
+const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./at-data.json"), 'utf-8'))
 
 module.exports = (req, res) => {
   const { query } = parse(req.url, true)
   const { type } = query
-  
+
   function filter(data, type) {
-    const TYPE = type.toUpperCase();
+    const TYPE = typeof type !== 'undefined' ? type.toUpperCase() : "ALL"
     return TYPE === "ALL" ? data : data.filter(wp => wp.type === TYPE)
   }
 
