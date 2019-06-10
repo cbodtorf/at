@@ -4,5 +4,19 @@
   "builds": [
     { "src": "api/data/index.js", "use": "@now/node" },
     { "src": "index.html", "use": "@now/static" }
+  ],
+  "routes": [{
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+    },
+    "src": "/api",
+    "dest": "/index.js"
+  },
+  {
+    "src": "/",
+    "dest": "https://atdb.now.sh"
+  }
   ]
 }
