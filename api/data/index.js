@@ -15,7 +15,8 @@ module.exports = (req, res) => {
   res.writeHead(200, {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
-    'Cache-Control': 'no-cache'
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+    'Cache-Control': 'no-cache',
   })
   res.end(JSON.stringify({
     data: filter(data, type)
